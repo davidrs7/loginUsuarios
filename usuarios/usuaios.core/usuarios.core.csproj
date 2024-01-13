@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Generic\ApiResponse.cs~RF6b7d27d8.TMP" />
+    <None Remove="interfaces\IRepository.cs~RF6b571023.TMP" />
+    <None Remove="interfaces\IRepository.cs~RF6b7b4e46.TMP" />
+    <None Remove="interfaces\IRepository.cs~RF6b7f38c6.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="entities\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+  </ItemGroup>
+
+</Project>
