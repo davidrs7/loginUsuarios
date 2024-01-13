@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Mime;
 using usuarios.api.Dto;
 using usuarios.core;
 using usuarios.core.interfaces;
@@ -7,6 +10,8 @@ using usuarios.infra.Data.Modelos;
 
 namespace usuarios.api.Controllers
 {
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Produces(MediaTypeNames.Application.Json)]
     [Route("api/[controller]")]
     [ApiController]
     public class CargosController : ControllerBase
@@ -16,7 +21,7 @@ namespace usuarios.api.Controllers
         {
             _apiRepository = userRepository;
         }
-
+         
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Cargo>>> GetAllCargos()
         {

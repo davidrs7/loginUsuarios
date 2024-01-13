@@ -8,9 +8,12 @@ using usuarios.infra.Repository;
 using System.ComponentModel.DataAnnotations;
 using usuarios.core.validators;
 using usuarios.infra.Data.Modelos;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Net.Mime;
 
 namespace usuarios.api.Controllers
 {
+ 
     [Route("api/[controller]")]
     [ApiController]
     public class EmpresasController : ControllerBase

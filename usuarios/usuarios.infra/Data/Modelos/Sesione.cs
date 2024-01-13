@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace usuarios.infra.Data.Modelos
 {
@@ -12,6 +13,7 @@ namespace usuarios.infra.Data.Modelos
         public DateTime? FechaFin { get; set; }
         public bool? Estado { get; set; }
 
+        [JsonIgnore]
         public virtual Usuario? Usuario { get; set; }
     }
 }

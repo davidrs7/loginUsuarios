@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using usuarios.core.interfaces;
 using usuarios.core;
 using usuarios.infra.Context;
+using usuarios.infra.Data.Modelos;
 
 namespace usuarios.infra.Repository
 {
@@ -19,6 +20,34 @@ namespace usuarios.infra.Repository
         public ApiRepository(login_tiinduxContext context)
         {
             _context = context;
+        }
+
+
+        public  int ObtenerUsuariosPorLogin(T entity)
+        {
+            int idusuario = 0;
+            PropertyInfo userProperty = typeof(T).GetProperty("usuario");
+            PropertyInfo passwordProperty = typeof(T).GetProperty("pw");
+
+            string correo = (string)userProperty.GetValue(entity, null);
+
+            var usuarios = _context.Usuarios
+                                    .Where(x => x.CorreoElectronico == correo)
+                                    .ToList();
+
+            if (usuarios.Count() > 0)
+            {
+                string pwLogin = (string)passwordProperty.GetValue(entity, null);
+                bool respuesta = BCrypt.Net.BCrypt.Verify(pwLogin, usuarios[0].Contraseña);
+
+                if (respuesta)
+                {
+                    return usuarios[0].UsuarioId;
+                }
+            }
+
+            // Retorna una lista vacía si no hay usuarios o si la autenticación falló
+            return idusuario;
         }
         public async Task<ApiResponse<string>> Create(T entity, string password)
         {
@@ -97,7 +126,8 @@ namespace usuarios.infra.Repository
                     Data = data
                 };
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 return new ApiResponse<IEnumerable<T>>
                 {
                     Estado = new Estado { Codigo = "500", Mensaje = "Error", Descripcion = ex.Message },
@@ -139,7 +169,7 @@ namespace usuarios.infra.Repository
                     Object valorPw = passwordProperty.GetValue(entity);
                     string hashedPassword = BCrypt.Net.BCrypt.HashPassword(valorPw.ToString());
                     passwordProperty.SetValue(entity, hashedPassword);
-                }                       
+                }
 
                 var existingEntity = await _context.Set<T>().FindAsync(id);
 

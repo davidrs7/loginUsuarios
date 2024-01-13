@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="Data\ConfigTablas\SexoConfig.cs~RF7f7c439b.TMP" />
     <None Remove="Data\ConfigTablas\TipDocConfig.cs~RF7f7f6b96.TMP" />
+    <None Remove="Data\Modelos\Sesione.cs~RF9a69d6da.TMP" />
   </ItemGroup>
 
   <ItemGroup>

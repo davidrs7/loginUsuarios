@@ -25,7 +25,6 @@ E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\bin\De
 E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
-E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
@@ -91,3 +90,6 @@ E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\obj\De
 E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\obj\Debug\net6.0\usuarios.api.pdb
 E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\obj\Debug\net6.0\usuarios.api.genruntimeconfig.cache
 E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\obj\Debug\net6.0\ref\usuarios.api.dll
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\bin\Debug\net6.0\Scrutor.dll
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

@@ -8,6 +8,7 @@ namespace usuarios.core.interfaces
 {
     public interface IRepository<T>
     {
+        int ObtenerUsuariosPorLogin(T entity);
         Task<ApiResponse<IEnumerable<T>>> GetAll();
         Task<ApiResponse<T>> GetById(int id);
         Task<ApiResponse<string>> Create(T entity, string password);
