@@ -20,23 +20,22 @@ namespace usuarios.api.Controllers
         private readonly IRepository<Sesione> _apiRepositorySession;
         private readonly IConfiguration _configuration;
 
-        public LoginController(IRepository<loginDto> userRepositoryLogin, IRepository<Usuario> userRepositoryUser,IRepository<Sesione> userRepositorySession, IConfiguration configuration)
+        public LoginController(IRepository<loginDto> userRepositoryLogin, IRepository<Usuario> userRepositoryUser, IRepository<Sesione> userRepositorySession, IConfiguration configuration)
         {
             _apiRepositoryLogin = userRepositoryLogin;
             _apiRepositoryUser = userRepositoryUser;
             _apiRepositorySession = userRepositorySession;
             _configuration = configuration;
         }
-        [HttpPost("Login")]
+        [HttpPost]
         public async Task<ApiResponse<Sesione>> Login(loginDto request)
         {
             try
             {
-                var idUsuario =  _apiRepositoryLogin.ObtenerUsuariosPorLogin(request);
+                var idUsuario = _apiRepositoryLogin.ObtenerUsuariosPorLogin(request);
 
                 if (idUsuario > 0)
-                { 
-
+                {
                     Sesione sesione = new Sesione()
                     {
                         UsuarioId = idUsuario,
@@ -46,22 +45,20 @@ namespace usuarios.api.Controllers
                         FechaFin = null
                     };
 
-                    await _apiRepositorySession.Create(sesione,"");
+                    await _apiRepositorySession.Create(sesione, "");
                     return new ApiResponse<Sesione>
                     {
-
                         Estado = new Estado { Codigo = "200", Mensaje = "Exito", Descripcion = "" },
                         Data = sesione
                     };
                 }
                 else
-                {              
-
-                return new ApiResponse<Sesione>
                 {
-                    Estado = new Estado { Codigo = "500", Mensaje = "Error", Descripcion = "Verifique usuario y contraseña" },
-                    Data = null
-                };
+                    return new ApiResponse<Sesione>
+                    {
+                        Estado = new Estado { Codigo = "500", Mensaje = "Error", Descripcion = "Verifique usuario y contraseña" },
+                        Data = null
+                    };
                 }
             }
             catch (Exception ex)
@@ -72,7 +69,7 @@ namespace usuarios.api.Controllers
                     Data = null
                 };
             }
-             
+
         }
 
 

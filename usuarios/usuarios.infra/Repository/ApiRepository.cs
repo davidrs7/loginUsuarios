@@ -162,14 +162,14 @@ namespace usuarios.infra.Repository
             try
             {
 
-                PropertyInfo passwordProperty = typeof(T).GetProperty("Contraseña");
+                //PropertyInfo passwordProperty = typeof(T).GetProperty("Contraseña");
 
-                if (passwordProperty != null)
-                {
-                    Object valorPw = passwordProperty.GetValue(entity);
-                    string hashedPassword = BCrypt.Net.BCrypt.HashPassword(valorPw.ToString());
-                    passwordProperty.SetValue(entity, hashedPassword);
-                }
+                //if (passwordProperty != null)
+                //{
+                //    Object valorPw = passwordProperty.GetValue(entity);
+                //    string hashedPassword = BCrypt.Net.BCrypt.HashPassword(valorPw.ToString());
+                //    passwordProperty.SetValue(entity, hashedPassword);
+                //}
 
                 var existingEntity = await _context.Set<T>().FindAsync(id);
 

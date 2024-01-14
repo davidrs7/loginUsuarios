@@ -4,6 +4,9 @@ using usuarios.api.Dto;
 using usuarios.core.interfaces;
 using usuarios.core;
 using usuarios.infra.Data.Modelos;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace usuarios.api.Controllers
 {
@@ -12,9 +15,12 @@ namespace usuarios.api.Controllers
     public class SesionController : ControllerBase
     {
         private readonly IRepository<Sesione> _apiRepository;
-        public SesionController(IRepository<Sesione> userRepository)
+        private readonly IConfiguration _configuration;
+
+        public SesionController(IRepository<Sesione> userRepository, IConfiguration configuration)
         {
             _apiRepository = userRepository;
+            _configuration = configuration;
         }
 
         [HttpGet]
@@ -58,7 +64,7 @@ namespace usuarios.api.Controllers
                 {
                     UsuarioId = createSesionDto.UsuarioID,
                     Token = createSesionDto.Token,
-                    FechaInicio = createSesionDto.FechaInicio,
+                    FechaInicio = (DateTime)createSesionDto.FechaInicio,
                     FechaFin = createSesionDto.FechaFin,
                     Estado = createSesionDto.Estado
                 };
@@ -94,7 +100,7 @@ namespace usuarios.api.Controllers
 
                 existeSesione.Data.UsuarioId = updateSesione.UsuarioID;
                 existeSesione.Data.Token = updateSesione.Token;
-                existeSesione.Data.FechaInicio = updateSesione.FechaInicio;
+                existeSesione.Data.FechaInicio = (DateTime)updateSesione.FechaInicio;
                 existeSesione.Data.FechaFin = updateSesione.FechaFin;
                 existeSesione.Data.Estado = updateSesione.Estado;
 
@@ -118,7 +124,18 @@ namespace usuarios.api.Controllers
 
             try
             {
-                var resultDelete = await _apiRepository.Delete(id);
+                var resultDelete = new ApiResponse<string>
+                {
+                    Estado = new Estado { Codigo = "", Mensaje = "", Descripcion = "" },
+                    Data = null
+                };
+                // Recibo id del usuario para ubicar el id sesion y manejarlo generico.
+                var sesionActiva = _apiRepository.GetAll().Result.Data.Where(x => x.UsuarioId == id).ToList();
+                foreach (Sesione sesion in sesionActiva)
+                {
+                    resultDelete = await _apiRepository.Delete(sesion.SesionId);
+                }
+
                 return resultDelete;
             }
 
@@ -131,5 +148,60 @@ namespace usuarios.api.Controllers
                 };
             }
         }
+
+        [HttpGet("token/{token}")]
+        public async Task<ApiResponse<Sesione>> GetSesionByToken(String token)
+        {
+            try
+            {
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var validationParameters = GetValidationParameters();
+                var principal = tokenHandler.ValidateToken(token, validationParameters, out var validatedToken);
+                var sesionToken = tokenHandler.WriteToken(validatedToken);
+                var sesionActiva = _apiRepository.GetAll().Result.Data.Where(x => x.Token == token).ToList();
+                Sesione sesionResp = new Sesione
+                {
+                    SesionId = sesionActiva[0].SesionId,
+                    Token = sesionActiva[0].Token,
+                    UsuarioId = sesionActiva[0].UsuarioId,
+                    FechaInicio = sesionActiva[0].FechaInicio,
+                    FechaFin = sesionActiva[0].FechaFin,
+                    Estado = sesionActiva[0].Estado
+                };
+         
+                var resultSesion = new ApiResponse<Sesione>
+                {
+                    Estado = new Estado { Codigo = "200", Mensaje = "", Descripcion = "" },
+                    Data = sesionResp
+                };
+                return resultSesion;
+
+            }
+            catch (Exception ex)
+            {
+                return new ApiResponse<Sesione>
+                {
+                    Estado = new Estado { Codigo = "500", Mensaje = "Error", Descripcion = ex.Message },
+                    Data = null
+                };
+            }
+
+
+        }
+
+        private TokenValidationParameters GetValidationParameters()
+        {
+            return new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Authentication:secretKey"])),
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ValidateLifetime = true, // Validar la expiración del token
+                ClockSkew = TimeSpan.Zero // Sin tolerancia de tiempo
+            };
+        }
+
+
     }
 }

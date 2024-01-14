@@ -44,7 +44,7 @@ namespace usuarios.api.Controllers
                     NumDocumento = createUserDto.NumDocumento,
                     CorreoElectronico = createUserDto.CorreoElectronico,
                     Contraseña = createUserDto.Contraseña,
-                    Telefono = createUserDto.Telefono, 
+                    Telefono = createUserDto.Telefono,
                     Direccion = createUserDto.Direccion,
                     FechaNacimiento = createUserDto.FechaNacimiento,
                     FechaCreacion = createUserDto.FechaCreacion,
@@ -113,15 +113,20 @@ namespace usuarios.api.Controllers
                         Data = null
                     };
                 }
-                
+                bool validaPw = string.Equals(existingUser.Data.Contraseña, updateUserDto.Contraseña.Trim());
+                if (!validaPw)
+                {
+                    updateUserDto.Contraseña = BCrypt.Net.BCrypt.HashPassword(updateUserDto.Contraseña);
+                }
+
                 existingUser.Data.Nombre = updateUserDto.Nombre;
                 existingUser.Data.TipoDocumento = updateUserDto.TipoDocumento;
                 existingUser.Data.NumDocumento = updateUserDto.NumDocumento;
                 existingUser.Data.CorreoElectronico = updateUserDto.CorreoElectronico;
-                existingUser.Data.Contraseña = updateUserDto.Contraseña; 
+                existingUser.Data.Contraseña = updateUserDto.Contraseña;
                 existingUser.Data.Telefono = updateUserDto.Telefono;
                 existingUser.Data.Contraseña = updateUserDto.Contraseña;
-                existingUser.Data.Direccion = updateUserDto.Direccion;        
+                existingUser.Data.Direccion = updateUserDto.Direccion;
                 existingUser.Data.FechaNacimiento = updateUserDto.FechaNacimiento;
                 existingUser.Data.FechaCreacion = updateUserDto.FechaCreacion;
                 existingUser.Data.SexoId = updateUserDto.SexoId;
@@ -151,9 +156,10 @@ namespace usuarios.api.Controllers
         public async Task<ApiResponse<string>> DeleteUser(int id)
         {
 
-            try { 
-            var resultDelete = await _apiRepository.Delete(id);   
-            return resultDelete;
+            try
+            {
+                var resultDelete = await _apiRepository.Delete(id);
+                return resultDelete;
             }
 
             catch (Exception ex)
