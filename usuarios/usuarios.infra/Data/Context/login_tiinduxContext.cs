@@ -28,6 +28,9 @@ namespace usuarios.infra.Context
         public virtual DbSet<Tiposdocumento> Tiposdocumentos { get; set; } = null!;
         public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
         public virtual DbSet<rolesPermisos> rolesPermisos { get; set; } = null!;
+        public virtual DbSet<Objetivo> Objetivos { get; set; } = null!;
+        public virtual DbSet<EstadoAccion> EstadoAccion { get; set; } = null!;
+        public virtual DbSet<AccionObjetivo> AccionesObjetivos { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -49,6 +52,9 @@ namespace usuarios.infra.Context
             modelBuilder.ApplyConfiguration(new TipDocConfig());
             modelBuilder.ApplyConfiguration(new usuariosConfig()); 
             modelBuilder.ApplyConfiguration(new rolesPermisosConfig());
+            modelBuilder.ApplyConfiguration(new ObjetivoConfig());
+            modelBuilder.ApplyConfiguration(new EstadoAccionConfig());
+            modelBuilder.ApplyConfiguration(new AccionesObjetivosConfig());
 
         }
          

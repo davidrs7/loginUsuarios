@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="appsettings.json~RF7ea28442.TMP" />
+    <None Remove="Dto\3jh1jclx.fgv~" />
     <None Remove="Dto\CargoDto.cs~RF80505ba0.TMP" />
     <None Remove="Dto\TipDocDto.cs~RF80722103.TMP" />
   </ItemGroup>

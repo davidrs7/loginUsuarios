@@ -31,6 +31,14 @@ namespace usuarios.api.Controllers
             return Ok(users);
         }
 
+        [HttpGet("hierarchy/{id}")]
+        public async Task<ActionResult<IEnumerable<Usuario>>> GetUsersByIdBoss(int id)
+        {
+            var users = await _apiRepository.GetAll();
+            users.Data = users.Data.Where(x => x.JefeId == id);    
+            return Ok(users);
+        }
+
         [HttpPost]
         public async Task<ApiResponse<string>> CreateUser([FromBody] CreateUserDto createUserDto)
         {
