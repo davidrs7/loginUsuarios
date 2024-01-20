@@ -6,7 +6,7 @@ using usuarios.core;
 using usuarios.infra.Data.Modelos;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
+using System.Text; 
 
 namespace usuarios.api.Controllers
 {
@@ -159,6 +159,8 @@ namespace usuarios.api.Controllers
                 var principal = tokenHandler.ValidateToken(token, validationParameters, out var validatedToken);
                 var sesionToken = tokenHandler.WriteToken(validatedToken);
                 var sesionActiva = _apiRepository.GetAll().Result.Data.Where(x => x.Token == token).ToList();
+
+
                 Sesione sesionResp = new Sesione
                 {
                     SesionId = sesionActiva[0].SesionId,
@@ -197,8 +199,8 @@ namespace usuarios.api.Controllers
                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Authentication:secretKey"])),
                 ValidateIssuer = false,
                 ValidateAudience = false,
-                ValidateLifetime = true, // Validar la expiración del token
-                ClockSkew = TimeSpan.Zero // Sin tolerancia de tiempo
+                ValidateLifetime = true,  
+                ClockSkew = TimeSpan.Zero  
             };
         }
 

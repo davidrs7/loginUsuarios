@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using usuarios.api.util;
 
 namespace usuarios.api.Controllers
 {
@@ -33,6 +34,7 @@ namespace usuarios.api.Controllers
             try
             {
                 var idUsuario = _apiRepositoryLogin.ObtenerUsuariosPorLogin(request);
+                tokenUtil nuevoToken = new tokenUtil(_apiRepositoryLogin,_apiRepositoryUser, _apiRepositorySession, _configuration);
 
                 if (idUsuario > 0)
                 {
@@ -41,7 +43,7 @@ namespace usuarios.api.Controllers
                         UsuarioId = idUsuario,
                         Estado = true,
                         FechaInicio = DateTime.Now,
-                        Token = generateToken(idUsuario),
+                        Token = nuevoToken.generateToken(idUsuario),
                         FechaFin = null
                     };
 
@@ -73,7 +75,7 @@ namespace usuarios.api.Controllers
         }
 
 
-
+        /*
         private string generateToken(int idUsuario)
         {
 
@@ -107,5 +109,7 @@ namespace usuarios.api.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
+        */
     }
 }
