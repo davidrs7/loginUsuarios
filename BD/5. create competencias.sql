@@ -1,4 +1,6 @@
  
+ 
+ 
 USE `login_tiindux`;
 
 
@@ -19,8 +21,7 @@ CREATE TABLE IF NOT EXISTS Preguntas (
 -- Tabla Opciones_Respuesta
 CREATE TABLE IF NOT EXISTS Opciones_Respuesta (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    id_pregunta INT,
-    FOREIGN KEY (id_pregunta) REFERENCES Preguntas(id),
+    id_pregunta INT, 
     descripcion TEXT,
     estado BOOLEAN,
     peso double
