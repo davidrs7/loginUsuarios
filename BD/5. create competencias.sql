@@ -1,9 +1,4 @@
- 
- 
- 
-USE `login_tiindux`;
-
-
+ USE `login_tiindux`;
 
 drop table if exists  Respuestas_Usuario; commit;
 drop table if exists  Opciones_Respuesta; commit;
@@ -30,10 +25,10 @@ CREATE TABLE IF NOT EXISTS Opciones_Respuesta (
 -- Tabla Respuestas_Usuario
 CREATE TABLE IF NOT EXISTS Respuestas_Usuario (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    id_pregunta INT,
-    FOREIGN KEY (id_pregunta) REFERENCES Preguntas(id),
+    id_pregunta INT, 
     id_respuesta INT,
-    FOREIGN KEY (id_respuesta) REFERENCES Opciones_Respuesta(id),
+    id_usuario_califica INT,
+    id_usuario_calificado INT,
     comentarios TEXT,
     fecha_accion DATETIME
 );

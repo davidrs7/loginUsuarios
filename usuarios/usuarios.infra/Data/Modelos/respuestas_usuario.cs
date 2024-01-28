@@ -11,7 +11,9 @@ namespace usuarios.infra.Data.Modelos
         public int id {  get; set; }
         public int id_pregunta {  get; set; }
         public int id_respuesta {  get; set; }
+        public int id_usuario_califica {  get; set; }
+        public int id_usuario_calificado {  get; set; }
         public string comentarios {  get; set; } 
-        public DateTime fecha_accion {  get; set; }
+        public DateTime fecha_accion { get; set; } = DateTime.Now;
     }
 }

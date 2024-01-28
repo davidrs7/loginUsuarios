@@ -17,6 +17,8 @@ namespace usuarios.infra.Data.ConfigTablas
             entity.HasKey(e => e.id);
             entity.Property(e => e.id_pregunta).HasColumnName("id_pregunta");
             entity.Property(e => e.id_respuesta).HasColumnName("id_respuesta");
+            entity.Property(e => e.id_usuario_califica).HasColumnName("id_usuario_califica");
+            entity.Property(e => e.id_usuario_calificado).HasColumnName("id_usuario_calificado");
             entity.Property(e => e.comentarios).HasColumnType("comentarios");
             entity.Property(e => e.fecha_accion).HasColumnType("datetime");
         }

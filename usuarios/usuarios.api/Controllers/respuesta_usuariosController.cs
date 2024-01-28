@@ -25,27 +25,19 @@ namespace usuarios.api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ApiResponse<respuestas_usuario>> Getrespuestas_usuarioById(int id)
+        public async Task<IEnumerable<respuestas_usuario>> Getrespuestas_usuarioById(int id)
         {
-            try
-            {
-                var respuestas_usuario = await _apiRepository.GetById(id);
+                 var respuestas_usuario = await _apiRepository.GetAll();
+                var retonar = respuestas_usuario.Data.Where(x => x.id_usuario_calificado == id).ToList();
+                 
 
                 if (respuestas_usuario.Data == null)
                 {
                     respuestas_usuario.Estado.Descripcion = "No existen datos para esta consulta.";
-                    return respuestas_usuario;
+                    return retonar;
                 }
-                return respuestas_usuario;
-            }
-            catch (Exception ex)
-            {
-                return new ApiResponse<respuestas_usuario>
-                {
-                    Estado = new Estado { Codigo = "500", Mensaje = "Error", Descripcion = ex.InnerException.Message },
-                    Data = null
-                };
-            }
+                return retonar;
+              
         }
 
 
@@ -58,6 +50,8 @@ namespace usuarios.api.Controllers
                 {
                     id_pregunta = respuestas_usuarioDto.id_pregunta,
                     id_respuesta = respuestas_usuarioDto.id_respuesta,
+                    id_usuario_califica = respuestas_usuarioDto.id_usuario_califica,
+                    id_usuario_calificado = respuestas_usuarioDto.id_usuario_calificado,
                     comentarios = respuestas_usuarioDto.comentarios,
                     fecha_accion = respuestas_usuarioDto.fecha_accion
                 };
@@ -94,10 +88,12 @@ namespace usuarios.api.Controllers
                 existerespuestas_usuario.Data.id_pregunta = updaterespuestas_usuario.id_pregunta;
                 existerespuestas_usuario.Data.id_respuesta = updaterespuestas_usuario.id_respuesta;
                 existerespuestas_usuario.Data.comentarios = updaterespuestas_usuario.comentarios;
+                existerespuestas_usuario.Data.id_usuario_califica = updaterespuestas_usuario.id_usuario_califica;
+                existerespuestas_usuario.Data.id_usuario_calificado = updaterespuestas_usuario.id_usuario_calificado;
                 existerespuestas_usuario.Data.fecha_accion = updaterespuestas_usuario.fecha_accion;
 
                 var respuesta = await _apiRepository.Update(id, existerespuestas_usuario.Data);
-                return respuesta;
+                return respuesta;   
             }
             catch (Exception ex)
             {
