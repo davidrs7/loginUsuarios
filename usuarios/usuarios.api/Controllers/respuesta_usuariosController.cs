@@ -25,19 +25,12 @@ namespace usuarios.api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IEnumerable<respuestas_usuario>> Getrespuestas_usuarioById(int id)
+        public async Task<ActionResult<IEnumerable<respuestas_usuario>>> Getrespuestas_usuarioById(int id)
         {
-                 var respuestas_usuario = await _apiRepository.GetAll();
-                var retonar = respuestas_usuario.Data.Where(x => x.id_usuario_calificado == id).ToList();
-                 
+            var respuestas_usuario = await _apiRepository.GetAll();
+            respuestas_usuario.Data = respuestas_usuario.Data.Where(x => x.id_usuario_calificado == id);
+            return Ok(respuestas_usuario);
 
-                if (respuestas_usuario.Data == null)
-                {
-                    respuestas_usuario.Estado.Descripcion = "No existen datos para esta consulta.";
-                    return retonar;
-                }
-                return retonar;
-              
         }
 
 
@@ -93,7 +86,7 @@ namespace usuarios.api.Controllers
                 existerespuestas_usuario.Data.fecha_accion = updaterespuestas_usuario.fecha_accion;
 
                 var respuesta = await _apiRepository.Update(id, existerespuestas_usuario.Data);
-                return respuesta;   
+                return respuesta;
             }
             catch (Exception ex)
             {
