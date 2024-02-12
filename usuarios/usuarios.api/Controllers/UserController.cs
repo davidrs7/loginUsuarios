@@ -7,6 +7,7 @@ using usuarios.core;
 using usuarios.infra.Repository;
 using System.ComponentModel.DataAnnotations;
 using usuarios.core.validators;
+using System.IO;
 using usuarios.infra.Data.Modelos;
 
 namespace usuarios.api.Controllers
@@ -31,11 +32,73 @@ namespace usuarios.api.Controllers
             return Ok(users);
         }
 
+        [HttpPost("cargar-usuarios")]
+        public async Task<IActionResult> CargarUsuarios([FromForm] FileUserModelDto model)
+        {
+            if (model == null || model.File == null || model.File.Length == 0)
+            {
+                return BadRequest("No se proporcionó ningún archivo o el archivo está vacío.");
+            }
+
+            var users = await _apiRepository.GetAll();
+            var contador = 0;
+
+            try
+            {
+                using (var reader = new StreamReader(model.File.OpenReadStream()))
+                {
+                    var usuarios = new List<Usuario>();
+
+                    while (!reader.EndOfStream)
+                    {
+                        var line = await reader.ReadLineAsync();
+                        var values = line.Split(',');
+
+                        var usuario = new Usuario
+                        {
+                            Nombre = values[0],
+                            TipoDocumento = Convert.ToInt32(values[1]),
+                            NumDocumento = values[2],
+                            CorreoElectronico = values[3],
+                            Contraseña = values[4],
+                            Telefono = values[5],
+                            Direccion = values[6],
+                            FechaNacimiento = DateTime.Parse(values[7]),
+                            FechaCreacion = DateTime.Parse(values[8]),
+                            SexoId = Convert.ToInt32(values[9]),
+                            JefeId = Convert.ToInt32(values[10]),
+                            RolId = Convert.ToInt32(values[11]),
+                            CargoId = Convert.ToInt32(values[12]),
+                            EmpresaId = Convert.ToInt32(values[13]),
+                            UsuarioIdOpcional = Convert.ToInt32(values[14]),
+                            Estado = Convert.ToBoolean(values[15])
+                        };
+
+                        usuarios.Add(usuario);
+
+                        if (users.Data.Where(x => x.NumDocumento != usuario.NumDocumento).Count() == 0)
+                        {
+                            var create = await _apiRepository.Create(usuario, usuario.Contraseña);
+                            contador = create.Estado.Codigo == "200" ? contador += 1 : contador;
+                        }
+
+                    }
+
+
+                    return Ok("Usuarios cargados exitosamente.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error al procesar el archivo: {ex.Message}");
+            }
+        }
+
         [HttpGet("hierarchy/{id}")]
         public async Task<ActionResult<IEnumerable<Usuario>>> GetUsersByIdBoss(int id)
         {
             var users = await _apiRepository.GetAll();
-            users.Data = users.Data.Where(x => x.JefeId == id);    
+            users.Data = users.Data.Where(x => x.JefeId == id);
             return Ok(users);
         }
 
