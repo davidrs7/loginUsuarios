@@ -33,11 +33,15 @@ namespace usuarios.api.Controllers
         }
 
         [HttpPost("cargar-usuarios")]
-        public async Task<IActionResult> CargarUsuarios([FromForm] FileUserModelDto model)
+        public async Task<ApiResponse<string>> CargarUsuarios([FromForm] FileUserModelDto model)
         {
             if (model == null || model.File == null || model.File.Length == 0)
             {
-                return BadRequest("No se proporcionó ningún archivo o el archivo está vacío.");
+              return new ApiResponse<string>
+                {
+                    Estado = new Estado { Codigo = "500", Mensaje = "Error", Descripcion = "Archivo vacio" },
+                    Data = null
+                };
             }
 
             var users = await _apiRepository.GetAll();
@@ -76,7 +80,9 @@ namespace usuarios.api.Controllers
 
                         usuarios.Add(usuario);
 
-                        if (users.Data.Where(x => x.NumDocumento != usuario.NumDocumento).Count() == 0)
+                        var userSel = users.Data.Where(x => x.NumDocumento == usuario.NumDocumento).Count();
+
+                        if (userSel == 0)
                         {
                             var create = await _apiRepository.Create(usuario, usuario.Contraseña);
                             contador = create.Estado.Codigo == "200" ? contador += 1 : contador;
@@ -84,13 +90,20 @@ namespace usuarios.api.Controllers
 
                     }
 
-
-                    return Ok("Usuarios cargados exitosamente.");
+                    return new ApiResponse<string>
+                    {
+                        Estado = new Estado { Codigo = "200", Mensaje = "Exito", Descripcion = "Se cargaron: " + contador + " usuarios de: " + usuarios.Count() +" subidos en el archivo." },
+                        Data = null
+                    };
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Error al procesar el archivo: {ex.Message}");
+                return new ApiResponse<string>
+                {
+                    Estado = new Estado { Codigo = "500", Mensaje = "Error", Descripcion = "Carga exitosa" },
+                    Data = null
+                };
             }
         }
 
