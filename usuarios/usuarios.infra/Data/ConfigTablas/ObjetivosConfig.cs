@@ -16,6 +16,7 @@ namespace usuarios.infra.Data.ConfigTablas
             entity.ToTable("Objetivos");
             entity.HasKey(o => o.Id);
             entity.Property(e => e.Titulo).HasMaxLength(255);
+            entity.Property(e => e.IdUsuario).HasMaxLength(255);
             entity.Property(e => e.Descripcion).HasMaxLength(255);
             entity.Property(e => e.Peso).HasColumnName("Peso");
             entity.Property(e => e.FechaInicio).HasColumnType("datetime");

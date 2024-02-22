@@ -28,28 +28,14 @@ namespace usuarios.api.Controllers
             return Ok(objetivos);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ApiResponse<Objetivo>> GetObjetivosById(int id)
-        {
-            try
-            {
-                var Objetivo = await _apiRepository.GetById(id);
 
-                if (Objetivo.Data == null)
-                {
-                    Objetivo.Estado.Descripcion = "No existen datos para esta consulta.";
-                    return Objetivo;
-                }
-                return Objetivo;
-            }
-            catch (Exception ex)
-            {
-                return new ApiResponse<Objetivo>
-                {
-                    Estado = new Estado { Codigo = "500", Mensaje = "Error", Descripcion = ex.InnerException.Message },
-                    Data = null
-                };
-            }
+        // Se recibe el id del usuario
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Objetivo>> GetObjetivosById(int id)
+        { 
+                var objetivos = await _apiRepository.GetAll();
+                objetivos.Data = objetivos.Data.Where(x => x.IdUsuario == id); 
+                return Ok(objetivos); 
         }
 
 
@@ -60,6 +46,7 @@ namespace usuarios.api.Controllers
             {
                 var Objetivo = new Objetivo
                 {
+                    IdUsuario = createObjetivoDto.IdUsuario,
                     Titulo = createObjetivoDto.Titulo,
                     Descripcion = createObjetivoDto.Descripcion,
                     Peso = createObjetivoDto.Peso,
@@ -96,6 +83,7 @@ namespace usuarios.api.Controllers
                     };
                 }
 
+                existeObjetivo.Data.IdUsuario = updateObjetivo.IdUsuario;
                 existeObjetivo.Data.Titulo = updateObjetivo.Titulo;
                 existeObjetivo.Data.Descripcion = updateObjetivo.Descripcion;
                 existeObjetivo.Data.Peso = updateObjetivo.Peso;
