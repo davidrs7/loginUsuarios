@@ -7,9 +7,9 @@ INSERT INTO EstadosAcciones (Estado) VALUES
 
 -- Insertar datos en la tabla Objetivos
 INSERT INTO Objetivos (Titulo, Descripcion, Peso, FechaInicio, FechaFin, Estado) VALUES
-('Objetivo 1', 'Descripción del objetivo 1', 0.8, '2022-01-01 08:00:00', '2022-01-15 17:00:00', true),
-('Objetivo 2', 'Descripción del objetivo 2', 0.6, '2022-02-01 10:00:00', '2022-02-28 18:00:00', false),
-('Objetivo 3', 'Descripción del objetivo 3', 0.9, '2022-03-01 09:00:00', '2022-03-31 16:00:00', true);
+('Objetivo 1', 1, 'Descripción del objetivo 1', 0.8, '2022-01-01 08:00:00', '2022-01-15 17:00:00', true),
+('Objetivo 2', 1, 'Descripción del objetivo 2', 0.6, '2022-02-01 10:00:00', '2022-02-28 18:00:00', false),
+('Objetivo 3',1 , 'Descripción del objetivo 3', 0.9, '2022-03-01 09:00:00', '2022-03-31 16:00:00', true);
 
 -- Insertar datos en la tabla AccionesObjetivos
 INSERT INTO AccionesObjetivos (IdObjetivo, IdUsuario, Descripcion, Calificacion, Evidencia, IdEstado, Comentarios, FechaAccion) VALUES

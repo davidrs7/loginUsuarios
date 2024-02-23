@@ -34,6 +34,7 @@ namespace usuarios.infra.Context
         public virtual DbSet<preguntas> Preguntas { get; set; } = null!;
         public virtual DbSet<opciones_respuesta> opciones_respuesta { get; set; } = null!;
         public virtual DbSet<respuestas_usuario> respuestas_usuario { get; set; } = null!;
+        public virtual DbSet<Competencia> Competencias { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -61,6 +62,7 @@ namespace usuarios.infra.Context
             modelBuilder.ApplyConfiguration(new PreguntasConfig());
             modelBuilder.ApplyConfiguration(new opciones_respuestaConfig());
             modelBuilder.ApplyConfiguration(new respuestas_usuarioConfig());
+            modelBuilder.ApplyConfiguration(new CompetenciaConfig());
 
         }
          
