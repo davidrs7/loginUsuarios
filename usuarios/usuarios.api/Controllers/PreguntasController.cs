@@ -59,6 +59,7 @@ namespace usuarios.api.Controllers
             {
                 var pregunta = new preguntas
                 {
+                    idcompetencia = preguntasDto.idcompetencia,
                     pregunta = preguntasDto.pregunta,
                     estado = preguntasDto.estado,
                     fecha_inicio = preguntasDto.fecha_inicio,
@@ -94,6 +95,7 @@ namespace usuarios.api.Controllers
                     };
                 }
 
+                existePregunta.Data.idcompetencia = updatePregunta.idcompetencia;
                 existePregunta.Data.pregunta = updatePregunta.pregunta;
                 existePregunta.Data.estado = updatePregunta.estado;
                 existePregunta.Data.fecha_inicio = updatePregunta.fecha_inicio;

@@ -16,6 +16,7 @@ namespace usuarios.infra.Data.ConfigTablas
             entity.ToTable("Preguntas");
             entity.HasKey(e => e.id);
             entity.Property(e => e.pregunta).HasColumnName("pregunta");
+            entity.Property(e => e.idcompetencia).HasColumnName("idcompetencia");
             entity.Property(e => e.estado).HasColumnName("estado");
             entity.Property(e => e.fecha_inicio).HasColumnType("datetime");
             entity.Property(e => e.fecha_fin).HasColumnType("datetime"); 

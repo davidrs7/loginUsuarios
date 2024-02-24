@@ -1,7 +1,10 @@
-INSERT INTO Preguntas (pregunta, estado, fecha_inicio, fecha_fin) VALUES
-    ('¿Cómo calificarías tu habilidad en X?', true, '2024-01-01', '2024-02-01'),
-    ('¿Qué tan cómodo te sientes con Y?', true, '2024-01-15', '2024-02-15'),
-    ('¿Como es tu desempeño en Z?', true, '2024-01-15', '2024-02-15');
+
+INSERT INTO Competencias (competencia,estado) values ('Liderazgo',1),('trabajo en equipo',1),('gestion',1); commit;
+
+INSERT INTO Preguntas (idcompetencia,pregunta, estado, fecha_inicio, fecha_fin) VALUES
+    (1,'¿Cómo calificarías tu habilidad en X?', true, '2024-01-01', '2024-02-01'),
+    (2,'¿Qué tan cómodo te sientes con Y?', true, '2024-01-15', '2024-02-15'),
+    (3,'¿Como es tu desempeño en Z?', true, '2024-01-15', '2024-02-15');
  commit;
 INSERT INTO Opciones_Respuesta (id_pregunta, descripcion, estado, peso) VALUES
     (1, 'Supera las expectativas', true, 1),

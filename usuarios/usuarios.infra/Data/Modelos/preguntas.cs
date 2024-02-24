@@ -9,6 +9,7 @@ namespace usuarios.infra.Data.Modelos
     public class preguntas
     {
         public int id { get; set; }
+        public int idcompetencia { get; set; }
         public string pregunta { get; set; }
         public bool estado { get; set; }
         public DateTime fecha_inicio { get; set; }

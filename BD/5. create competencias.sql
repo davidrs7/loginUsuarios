@@ -2,15 +2,24 @@
 
 drop table if exists  Respuestas_Usuario; commit;
 drop table if exists  Opciones_Respuesta; commit;
+drop table if exists  Competencias; commit;
 drop table if exists  Preguntas; commit;
  
 -- Tabla Preguntas
 CREATE TABLE IF NOT EXISTS Preguntas (
     id INT PRIMARY KEY AUTO_INCREMENT,
+    idcompetencia int,
     pregunta TEXT,
     estado BOOLEAN,
     fecha_inicio DATE,
     fecha_fin DATE
+);
+
+
+CREATE TABLE IF NOT exists Competencias(
+	id int primary key auto_increment,
+    competencia text,
+    estado boolean
 );
 
 -- Tabla Opciones_Respuesta
