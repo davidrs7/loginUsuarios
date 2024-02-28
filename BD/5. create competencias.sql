@@ -41,3 +41,4 @@ CREATE TABLE IF NOT EXISTS Respuestas_Usuario (
     comentarios TEXT,
     fecha_accion DATETIME
 );
+ 
