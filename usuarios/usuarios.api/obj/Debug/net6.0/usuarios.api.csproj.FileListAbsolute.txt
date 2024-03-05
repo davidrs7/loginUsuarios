@@ -93,3 +93,4 @@ E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\obj\De
 E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\obj\Debug\net6.0\usuarios.api.pdb
 E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\obj\Debug\net6.0\usuarios.api.genruntimeconfig.cache
 E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\obj\Debug\net6.0\ref\usuarios.api.dll
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.api\bin\Debug\net6.0\usuarios.api.staticwebassets.runtime.json
