@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xFkGpx1rjKi11JGa7HQatmrW3QwAZJzUXtyiepnaY5Q=",
+  "Hash": "9LtqoBLmLa/BR0j1M+iFbpQ2STdlknzoBcx+bPsiNJY=",
   "Source": "usuarios.api",
   "BasePath": "_content/usuarios.api",
   "Mode": "Default",
@@ -357,12 +357,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.api\\wwwroot\\main.02b685811e36b685a347.js",
+      "Identity": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.api\\wwwroot\\main.32833c180027e89b277f.js",
       "SourceId": "usuarios.api",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.api\\wwwroot\\",
       "BasePath": "_content/usuarios.api",
-      "RelativePath": "main.02b685811e36b685a347.js",
+      "RelativePath": "main.32833c180027e89b277f.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -371,7 +371,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\main.02b685811e36b685a347.js"
+      "OriginalItemSpec": "wwwroot\\main.32833c180027e89b277f.js"
     },
     {
       "Identity": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.api\\wwwroot\\polyfills.729449adde1af49cebe3.js",

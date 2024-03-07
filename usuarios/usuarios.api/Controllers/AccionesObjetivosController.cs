@@ -125,7 +125,7 @@ namespace usuarios.api.Controllers
             }
         }
 
-
+         
         [HttpDelete("{id}")]
         public async Task<ApiResponse<string>> DeleteAccionObjetivo(int id)
         {
@@ -141,6 +141,77 @@ namespace usuarios.api.Controllers
                 return new ApiResponse<string>
                 {
                     Estado = new Estado { Codigo = "500", Mensaje = "Error", Descripcion = ex.InnerException.Message },
+                    Data = null
+                };
+            }
+        }
+
+
+
+        [HttpPost("cargar-acciones")]
+        public async Task<ApiResponse<string>> CargarAcciones([FromForm] FileUserModelDto model)
+        {
+            if (model == null || model.File == null || model.File.Length == 0)
+            {
+                return new ApiResponse<string>
+                {
+                    Estado = new Estado { Codigo = "500", Mensaje = "Error", Descripcion = "Archivo vacio" },
+                    Data = null
+                };
+            }
+
+            var users = await _apiRepository.GetAll();
+            var contador = 0;
+
+            try
+            {
+                using (var reader = new StreamReader(model.File.OpenReadStream()))
+                {
+                    var acciones = new List<AccionObjetivo>();
+
+                    while (!reader.EndOfStream)
+                    {
+                        var line = await reader.ReadLineAsync();
+                        var values = line.Split(',');
+
+                        var accion = new AccionObjetivo
+                        {
+                            IdObjetivo = Convert.ToInt32(values[0]),
+                            IdUsuario = Convert.ToInt32(values[1]), 
+                            Descripcion = values[2],
+                            Calificacion = Convert.ToInt32(values[3]),
+                            Evidencia = values[4],
+                            IdEstado = Convert.ToInt32(values[5]),
+                            Comentarios = values[6],
+                            FechaAccion = DateTime.Parse(values[7])
+                        };
+
+                        acciones.Add(accion);
+
+                        var objetivoSel = users.Data
+                                            .Where(x => x.IdObjetivo == accion.IdObjetivo && x.IdUsuario == accion.IdUsuario &&
+                                                        x.Descripcion == accion.Descripcion ).Count();
+
+                        if (objetivoSel == 0)
+                        {
+                            var create = await _apiRepository.Create(accion, "");
+                            contador = create.Estado.Codigo == "200" ? contador += 1 : contador;
+                        }
+
+                    }
+
+                    return new ApiResponse<string>
+                    {
+                        Estado = new Estado { Codigo = "200", Mensaje = "Exito", Descripcion = "Se cargaron: " + contador + " acciones de: " + acciones.Count() + " subidos en el archivo." },
+                        Data = null
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                return new ApiResponse<string>
+                {
+                    Estado = new Estado { Codigo = "500", Mensaje = "Error", Descripcion = "Problemas para cargar el archivo por favor revisa la estructura." },
                     Data = null
                 };
             }
