@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS login_tiindux;
+	DROP DATABASE IF EXISTS login_tiindux;
 CREATE DATABASE login_tiindux;
 USE login_tiindux;
 
@@ -89,10 +89,10 @@ CREATE TABLE IF NOT EXISTS UsuariosPermisos (
     FOREIGN KEY (PermisoID) REFERENCES Permisos(PermisoID)
 );
 
-CREATE TABLE IF NOT EXISTS Sesiones (
+CREATE TABLE IF NOT EXISTS login_tiindux.Sesiones (
     SesionID INT PRIMARY KEY AUTO_INCREMENT,
     UsuarioID INT,
-    Token VARCHAR(255) NOT NULL,
+    Token VARCHAR(10000) NOT NULL,
     FechaInicio DATETIME NOT NULL,
     FechaFin DATETIME,
     Estado BOOLEAN NOT NULL DEFAULT 1,
@@ -105,6 +105,4 @@ CREATE TABLE IF NOT EXISTS Jerarquias (
     SubordinadoID INT,
     FOREIGN KEY (JefeID) REFERENCES Usuarios(UsuarioID),
     FOREIGN KEY (SubordinadoID) REFERENCES Usuarios(UsuarioID)
-);
-
-
+); 

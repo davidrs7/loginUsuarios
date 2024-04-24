@@ -18,7 +18,7 @@ namespace usuarios.infra.Data.ConfigTablas
             entity.HasKey(e => e.RolId)
                 .HasName("PRIMARY");
 
-            entity.ToTable("roles");
+            entity.ToTable("Roles");
 
             entity.HasIndex(e => e.EmpresaId, "EmpresaID");
 

@@ -1,0 +1,17 @@
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\bin\Release\net6.0\usuarios.infra.deps.json
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\bin\Release\net6.0\usuarios.infra.runtimeconfig.json
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\bin\Release\net6.0\usuarios.infra.dll
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\bin\Release\net6.0\usuarios.infra.pdb
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\bin\Release\net6.0\usuarios.core.dll
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\bin\Release\net6.0\usuarios.core.pdb
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\obj\Release\net6.0\usuarios.infra.csproj.AssemblyReference.cache
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\obj\Release\net6.0\usuarios.infra.GeneratedMSBuildEditorConfig.editorconfig
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\obj\Release\net6.0\usuarios.infra.AssemblyInfoInputs.cache
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\obj\Release\net6.0\usuarios.infra.AssemblyInfo.cs
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\obj\Release\net6.0\usuarios.infra.csproj.CoreCompileInputs.cache
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\obj\Release\net6.0\usuarios.infra.csproj.CopyComplete
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\obj\Release\net6.0\usuarios.infra.dll
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\obj\Release\net6.0\refint\usuarios.infra.dll
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\obj\Release\net6.0\usuarios.infra.pdb
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\obj\Release\net6.0\usuarios.infra.genruntimeconfig.cache
+E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\obj\Release\net6.0\ref\usuarios.infra.dll

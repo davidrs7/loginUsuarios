@@ -1,11 +1,6 @@
  
 USE `login_tiindux`;
-
-
-
-drop table AccionesObjetivos; commit;
-drop table Objetivos; commit;
-drop table EstadosAcciones; commit;
+ 
 
 CREATE TABLE IF NOT EXISTS EstadosAcciones (
     Id INT PRIMARY KEY AUTO_INCREMENT,

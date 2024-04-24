@@ -14,7 +14,7 @@ namespace usuarios.infra.Data.ConfigTablas
     {
         void IEntityTypeConfiguration<Permiso>.Configure(EntityTypeBuilder<Permiso> entity)
         { 
-                entity.ToTable("permisos");
+                entity.ToTable("Permisos");
 
                 entity.Property(e => e.PermisoId).HasColumnName("PermisoID");
 
