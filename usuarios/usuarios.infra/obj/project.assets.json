@@ -6161,11 +6161,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.infra\\usuarios.infra.csproj",
+      "projectUniqueName": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj",
       "projectName": "usuarios.infra",
-      "projectPath": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.infra\\usuarios.infra.csproj",
+      "projectPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj",
       "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-      "outputPath": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.infra\\obj\\",
+      "outputPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.infra\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6182,8 +6182,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuaios.core\\usuarios.core.csproj": {
-              "projectPath": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuaios.core\\usuarios.core.csproj"
+            "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj": {
+              "projectPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sOBPfAlcuP+1M+h7siULp7sOMwSbbuymtDw4dOffHHLVR4PEF8CXoLI1NQ24j8oyAGAOZ0X4vBZYASrZ2FOu1Q==",
+  "dgSpecHash": "wZS5NVt8NXIIOpEaOxSYEvvmbPHdZczMgxL3AMRUewpEYXZ3b6gM9h9NVul/tgqjQXLRPPjF9Csh1421i+iiBA==",
   "success": true,
-  "projectFilePath": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.infra\\usuarios.infra.csproj",
+  "projectFilePath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\david\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",

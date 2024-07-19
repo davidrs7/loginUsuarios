@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = usuarios.infra
-build_property.ProjectDir = E:\david\Freelance\Tindux\Transmilenio\usuarios_api\usuarios\usuarios.infra\
+build_property.ProjectDir = E:\david\Freelance\Tindux\Integracion\loginUsuarios\usuarios\usuarios.infra\

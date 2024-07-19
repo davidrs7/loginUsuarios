@@ -4281,11 +4281,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.api\\usuarios.api.csproj",
+      "projectUniqueName": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.api\\usuarios.api.csproj",
       "projectName": "usuarios.api",
-      "projectPath": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.api\\usuarios.api.csproj",
+      "projectPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.api\\usuarios.api.csproj",
       "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-      "outputPath": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.api\\obj\\",
+      "outputPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4302,11 +4302,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuaios.core\\usuarios.core.csproj": {
-              "projectPath": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuaios.core\\usuarios.core.csproj"
+            "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj": {
+              "projectPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj"
             },
-            "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.infra\\usuarios.infra.csproj": {
-              "projectPath": "E:\\david\\Freelance\\Tindux\\Transmilenio\\usuarios_api\\usuarios\\usuarios.infra\\usuarios.infra.csproj"
+            "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj": {
+              "projectPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj"
             }
           }
         }

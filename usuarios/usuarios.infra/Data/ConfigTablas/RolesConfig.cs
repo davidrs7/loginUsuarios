@@ -23,6 +23,7 @@ namespace usuarios.infra.Data.ConfigTablas
             entity.HasIndex(e => e.EmpresaId, "EmpresaID");
 
             entity.Property(e => e.RolId).HasColumnName("RolID");
+            entity.Property(e => e.ColorId).HasColumnName("ColorId");
 
             entity.Property(e => e.Descripcion).HasMaxLength(255);
 
