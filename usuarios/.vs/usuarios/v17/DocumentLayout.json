@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\rrhh\\loginUsuarios\\usuarios\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E11BC84E-4B16-49D8-8A48-A2BF2C814890}|usuarios.api\\usuarios.api.csproj|c:\\users\\david\\onedrive\\documentos\\david\\freelance\\tiindux\\rrhh\\loginusuarios\\usuarios\\usuarios.api\\controllers\\sesioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E11BC84E-4B16-49D8-8A48-A2BF2C814890}|usuarios.api\\usuarios.api.csproj|solutionrelative:usuarios.api\\controllers\\sesioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E11BC84E-4B16-49D8-8A48-A2BF2C814890}|usuarios.api\\usuarios.api.csproj|c:\\users\\david\\onedrive\\documentos\\david\\freelance\\tiindux\\rrhh\\loginusuarios\\usuarios\\usuarios.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E11BC84E-4B16-49D8-8A48-A2BF2C814890}|usuarios.api\\usuarios.api.csproj|solutionrelative:usuarios.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E11BC84E-4B16-49D8-8A48-A2BF2C814890}|usuarios.api\\usuarios.api.csproj|c:\\users\\david\\onedrive\\documentos\\david\\freelance\\tiindux\\rrhh\\loginusuarios\\usuarios\\usuarios.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E11BC84E-4B16-49D8-8A48-A2BF2C814890}|usuarios.api\\usuarios.api.csproj|solutionrelative:usuarios.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0747542-3435-4594-AB9A-33AE4FFF0135}|usuarios.infra\\usuarios.infra.csproj|c:\\users\\david\\onedrive\\documentos\\david\\freelance\\tiindux\\rrhh\\loginusuarios\\usuarios\\usuarios.infra\\data\\configtablas\\sesionesconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0747542-3435-4594-AB9A-33AE4FFF0135}|usuarios.infra\\usuarios.infra.csproj|solutionrelative:usuarios.infra\\data\\configtablas\\sesionesconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0747542-3435-4594-AB9A-33AE4FFF0135}|usuarios.infra\\usuarios.infra.csproj|c:\\users\\david\\onedrive\\documentos\\david\\freelance\\tiindux\\rrhh\\loginusuarios\\usuarios\\usuarios.infra\\data\\configtablas\\rolesconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0747542-3435-4594-AB9A-33AE4FFF0135}|usuarios.infra\\usuarios.infra.csproj|solutionrelative:usuarios.infra\\data\\configtablas\\rolesconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\rrhh\\loginUsuarios\\usuarios\\usuarios.api\\appsettings.json",
+              "RelativeDocumentMoniker": "usuarios.api\\appsettings.json",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\rrhh\\loginUsuarios\\usuarios\\usuarios.api\\appsettings.json",
+              "RelativeToolTip": "usuarios.api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-04T18:02:21.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\rrhh\\loginUsuarios\\usuarios\\usuarios.api\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "usuarios.api\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\rrhh\\loginUsuarios\\usuarios\\usuarios.api\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "usuarios.api\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAnwCAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T17:03:13.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SesionController.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\rrhh\\loginUsuarios\\usuarios\\usuarios.api\\Controllers\\SesionController.cs",
+              "RelativeDocumentMoniker": "usuarios.api\\Controllers\\SesionController.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\rrhh\\loginUsuarios\\usuarios\\usuarios.api\\Controllers\\SesionController.cs",
+              "RelativeToolTip": "usuarios.api\\Controllers\\SesionController.cs",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAnwKUAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T17:03:13.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SesionesConfig.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\rrhh\\loginUsuarios\\usuarios\\usuarios.infra\\Data\\ConfigTablas\\SesionesConfig.cs",
+              "RelativeDocumentMoniker": "usuarios.infra\\Data\\ConfigTablas\\SesionesConfig.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\rrhh\\loginUsuarios\\usuarios\\usuarios.infra\\Data\\ConfigTablas\\SesionesConfig.cs",
+              "RelativeToolTip": "usuarios.infra\\Data\\ConfigTablas\\SesionesConfig.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T17:03:13.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RolesConfig.cs",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\rrhh\\loginUsuarios\\usuarios\\usuarios.infra\\Data\\ConfigTablas\\RolesConfig.cs",
+              "RelativeDocumentMoniker": "usuarios.infra\\Data\\ConfigTablas\\RolesConfig.cs",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\rrhh\\loginUsuarios\\usuarios\\usuarios.infra\\Data\\ConfigTablas\\RolesConfig.cs",
+              "RelativeToolTip": "usuarios.infra\\Data\\ConfigTablas\\RolesConfig.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAwAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-04T17:03:13.166Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
