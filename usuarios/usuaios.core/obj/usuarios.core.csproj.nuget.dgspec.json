@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj": {}
+    "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj": {}
   },
   "projects": {
-    "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj": {
+    "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj",
+        "projectUniqueName": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj",
         "projectName": "usuarios.core",
-        "projectPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj",
+        "projectPath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\obj\\",
+        "outputPath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -61,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

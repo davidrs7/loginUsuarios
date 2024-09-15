@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.api\\usuarios.api.csproj": {}
+    "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuarios.api\\usuarios.api.csproj": {}
   },
   "projects": {
-    "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj": {
+    "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj",
+        "projectUniqueName": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj",
         "projectName": "usuarios.core",
-        "projectPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj",
+        "projectPath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\obj\\",
+        "outputPath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -61,18 +67,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.api\\usuarios.api.csproj": {
+    "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuarios.api\\usuarios.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.api\\usuarios.api.csproj",
+        "projectUniqueName": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuarios.api\\usuarios.api.csproj",
         "projectName": "usuarios.api",
-        "projectPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.api\\usuarios.api.csproj",
+        "projectPath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuarios.api\\usuarios.api.csproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.api\\obj\\",
+        "outputPath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuarios.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,17 +89,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj": {
-                "projectPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj"
+              "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj": {
+                "projectPath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj"
               },
-              "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj": {
-                "projectPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj"
+              "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj": {
+                "projectPath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj"
               }
             }
           }
@@ -102,6 +109,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -164,18 +176,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj": {
+    "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj",
+        "projectUniqueName": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj",
         "projectName": "usuarios.infra",
-        "projectPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj",
+        "projectPath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuarios.infra\\usuarios.infra.csproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.infra\\obj\\",
+        "outputPath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuarios.infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -186,14 +198,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj": {
-                "projectPath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj"
+              "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj": {
+                "projectPath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuaios.core\\usuarios.core.csproj"
               }
             }
           }
@@ -202,6 +215,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -265,7 +283,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

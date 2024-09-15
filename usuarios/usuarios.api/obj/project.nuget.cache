@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6aNal5vo9aa7mCBfm/WAVlXEg+NX97ZPHYCGJArEr4jOul6ynCViLotNQ23+nNaP2XJqtgbkjki9UcU3/n7O+g==",
+  "dgSpecHash": "Z2yLEM3BZTE=",
   "success": true,
-  "projectFilePath": "E:\\david\\Freelance\\Tindux\\Integracion\\loginUsuarios\\usuarios\\usuarios.api\\usuarios.api.csproj",
+  "projectFilePath": "C:\\Users\\david\\OneDrive\\Documentos\\David\\Freelance\\Tiindux\\transmilenio\\loginUsuarios\\usuarios\\usuarios.api\\usuarios.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\david\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
