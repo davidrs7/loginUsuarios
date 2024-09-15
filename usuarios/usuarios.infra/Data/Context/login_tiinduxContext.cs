@@ -7,7 +7,7 @@ using usuarios.infra.Data.Modelos;
 
 namespace usuarios.infra.Context
 {
-    public  class login_tiinduxContext : DbContext
+    public class login_tiinduxContext : DbContext
     {
         public login_tiinduxContext()
         {
@@ -35,32 +35,30 @@ namespace usuarios.infra.Context
         public virtual DbSet<opciones_respuesta> opciones_respuesta { get; set; } = null!;
         public virtual DbSet<respuestas_usuario> respuestas_usuario { get; set; } = null!;
         public virtual DbSet<Competencia> Competencias { get; set; } = null!;
-<<<<<<< HEAD
         public virtual DbSet<Color> Color { get; set; } = null!;
-=======
         public virtual DbSet<PostulateVacantRel> PostulateVacantRel { get; set; } = null!;
         public virtual DbSet<SurveyResponses> SurveyResponses { get; set; } = null!;
->>>>>>> main
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-            { 
+            {
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            modelBuilder.ApplyConfiguration(new CargoConfig()); 
+            modelBuilder.ApplyConfiguration(new CargoConfig());
             modelBuilder.ApplyConfiguration(new EmpresasConfig());
             modelBuilder.ApplyConfiguration(new JerarquiaConfig());
-            modelBuilder.ApplyConfiguration(new PermisoConfig()); 
+            modelBuilder.ApplyConfiguration(new PermisoConfig());
             modelBuilder.ApplyConfiguration(new RolesConfig());
             modelBuilder.ApplyConfiguration(new SesionesConfig());
             modelBuilder.ApplyConfiguration(new SexoConfig());
             modelBuilder.ApplyConfiguration(new TipDocConfig());
-            modelBuilder.ApplyConfiguration(new usuariosConfig()); 
+            modelBuilder.ApplyConfiguration(new usuariosConfig());
             modelBuilder.ApplyConfiguration(new rolesPermisosConfig());
             modelBuilder.ApplyConfiguration(new ObjetivoConfig());
             modelBuilder.ApplyConfiguration(new EstadoAccionConfig());
@@ -69,14 +67,13 @@ namespace usuarios.infra.Context
             modelBuilder.ApplyConfiguration(new opciones_respuestaConfig());
             modelBuilder.ApplyConfiguration(new respuestas_usuarioConfig());
             modelBuilder.ApplyConfiguration(new CompetenciaConfig());
-<<<<<<< HEAD
-            modelBuilder.ApplyConfiguration(new ColorConfig());
-=======
+
+
             modelBuilder.ApplyConfiguration(new PostulateVacantRelConfig());
             modelBuilder.ApplyConfiguration(new SurveyResponsesConfig());
->>>>>>> main
+
 
         }
-         
+
     }
 }
