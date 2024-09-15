@@ -63,5 +63,11 @@ ehthumbs.db
 
 # Folder config file
 Desktop.ini
-
 usuarios/.vs/
+.pdb
+*.ilk
+*.obj
+Debug/.exe
+Degug/.dll
+Release/.exe
+Degug/*.dll
