@@ -35,7 +35,12 @@ namespace usuarios.infra.Context
         public virtual DbSet<opciones_respuesta> opciones_respuesta { get; set; } = null!;
         public virtual DbSet<respuestas_usuario> respuestas_usuario { get; set; } = null!;
         public virtual DbSet<Competencia> Competencias { get; set; } = null!;
+<<<<<<< HEAD
         public virtual DbSet<Color> Color { get; set; } = null!;
+=======
+        public virtual DbSet<PostulateVacantRel> PostulateVacantRel { get; set; } = null!;
+        public virtual DbSet<SurveyResponses> SurveyResponses { get; set; } = null!;
+>>>>>>> main
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -64,7 +69,12 @@ namespace usuarios.infra.Context
             modelBuilder.ApplyConfiguration(new opciones_respuestaConfig());
             modelBuilder.ApplyConfiguration(new respuestas_usuarioConfig());
             modelBuilder.ApplyConfiguration(new CompetenciaConfig());
+<<<<<<< HEAD
             modelBuilder.ApplyConfiguration(new ColorConfig());
+=======
+            modelBuilder.ApplyConfiguration(new PostulateVacantRelConfig());
+            modelBuilder.ApplyConfiguration(new SurveyResponsesConfig());
+>>>>>>> main
 
         }
          
