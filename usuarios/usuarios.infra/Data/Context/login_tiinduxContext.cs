@@ -67,8 +67,7 @@ namespace usuarios.infra.Context
             modelBuilder.ApplyConfiguration(new opciones_respuestaConfig());
             modelBuilder.ApplyConfiguration(new respuestas_usuarioConfig());
             modelBuilder.ApplyConfiguration(new CompetenciaConfig());
-
-
+            modelBuilder.ApplyConfiguration(new ColorConfig()); 
             modelBuilder.ApplyConfiguration(new PostulateVacantRelConfig());
             modelBuilder.ApplyConfiguration(new SurveyResponsesConfig());
 

@@ -8,13 +8,21 @@
       "sslPort": 44322
     }
   },
+
+  "Kestrel": {
+    "Endpoints": {
+      "Http": {
+        "Url": "http://0.0.0.0:7243"
+      }
+    }
+  },
   "profiles": {
     "usuarios.api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7243;http://localhost:5145",
+      "applicationUrl": "http://localhost:7243;http://localhost:5145",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

@@ -14,7 +14,7 @@ namespace usuarios.infra.Data.ConfigTablas
     {
         void IEntityTypeConfiguration<Empresa>.Configure(EntityTypeBuilder<Empresa> entity) {
 
-            entity.ToTable("Empresas");
+            entity.ToTable("empresas");
 
 
             entity.Property(e => e.EmpresaId).HasColumnName("EmpresaID");

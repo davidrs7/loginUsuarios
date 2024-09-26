@@ -18,7 +18,7 @@ namespace usuarios.infra.Data.ConfigTablas
             entity.HasKey(e => e.TipoDocumento)
                 .HasName("PRIMARY");
 
-            entity.ToTable("TiposDocumento");
+            entity.ToTable("tiposdocumento");
 
             entity.Property(e => e.Descripcion).HasMaxLength(100);
 

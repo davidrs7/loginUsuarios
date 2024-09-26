@@ -18,7 +18,7 @@ namespace usuarios.infra.Data.ConfigTablas
             entity.HasKey(e => e.RolId)
                 .HasName("PRIMARY");
 
-            entity.ToTable("Roles");
+            entity.ToTable("roles");
 
             entity.HasIndex(e => e.EmpresaId, "EmpresaID");
 
@@ -38,26 +38,7 @@ namespace usuarios.infra.Data.ConfigTablas
             entity.HasOne(d => d.Empresa)
                 .WithMany(p => p.Roles)
                 .HasForeignKey(d => d.EmpresaId)
-                .HasConstraintName("roles_ibfk_1");
-
-            entity.HasMany(d => d.Permisos)
-                .WithMany(p => p.Rols)
-                .UsingEntity<Dictionary<string, object>>(
-                    "Rolespermiso",
-                    l => l.HasOne<Permiso>().WithMany().HasForeignKey("PermisoId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("rolespermisos_ibfk_2"),
-                    r => r.HasOne<Role>().WithMany().HasForeignKey("RolId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("rolespermisos_ibfk_1"),
-                    j =>
-                    {
-                        j.HasKey("RolId", "PermisoId").HasName("PRIMARY").HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
-
-                        j.ToTable("rolespermisos");
-
-                        j.HasIndex(new[] { "PermisoId" }, "PermisoID");
-
-                        j.IndexerProperty<int>("RolId").HasColumnName("RolID");
-
-                        j.IndexerProperty<int>("PermisoId").HasColumnName("PermisoID");
-                    });
+                .HasConstraintName("roles_ibfk_1"); 
 
         }
     }

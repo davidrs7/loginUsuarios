@@ -13,7 +13,7 @@ namespace usuarios.infra.Data.ConfigTablas
     {
         void IEntityTypeConfiguration<preguntas>.Configure(EntityTypeBuilder<preguntas> entity)
         {
-            entity.ToTable("Preguntas");
+            entity.ToTable("preguntas");
             entity.HasKey(e => e.id);
             entity.Property(e => e.pregunta).HasColumnName("pregunta");
             entity.Property(e => e.idcompetencia).HasColumnName("idcompetencia");

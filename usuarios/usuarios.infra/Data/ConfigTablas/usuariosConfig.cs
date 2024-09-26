@@ -15,7 +15,7 @@ namespace usuarios.infra.Data.ConfigTablas
         void IEntityTypeConfiguration<Usuario>.Configure(EntityTypeBuilder<Usuario> entity)
         {
 
-            entity.ToTable("Usuarios");
+            entity.ToTable("usuarios");
 
             entity.HasIndex(e => e.CargoId, "CargoID");
 
@@ -87,25 +87,7 @@ namespace usuarios.infra.Data.ConfigTablas
                 .HasForeignKey(d => d.TipoDocumento)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("usuarios_ibfk_6");
-
-            entity.HasMany(d => d.Permisos)
-                .WithMany(p => p.Usuarios)
-                .UsingEntity<Dictionary<string, object>>(
-                    "Usuariospermiso",
-                    l => l.HasOne<Permiso>().WithMany().HasForeignKey("PermisoId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("usuariospermisos_ibfk_2"),
-                    r => r.HasOne<Usuario>().WithMany().HasForeignKey("UsuarioId").HasConstraintName("usuariospermisos_ibfk_1"),
-                    j =>
-                    {
-                        j.HasKey("UsuarioId", "PermisoId").HasName("PRIMARY").HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
-
-                        j.ToTable("usuariospermisos");
-
-                        j.HasIndex(new[] { "PermisoId" }, "PermisoID");
-
-                        j.IndexerProperty<int>("UsuarioId").HasColumnName("UsuarioID");
-
-                        j.IndexerProperty<int>("PermisoId").HasColumnName("PermisoID");
-                    });
+             
 
         }
     }

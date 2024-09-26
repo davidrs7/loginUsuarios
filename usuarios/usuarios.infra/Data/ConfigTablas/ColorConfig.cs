@@ -13,7 +13,8 @@ namespace usuarios.infra.Data.ConfigTablas
     internal class ColorConfig : IEntityTypeConfiguration<Color>
     {
         void IEntityTypeConfiguration<Color>.Configure(EntityTypeBuilder<Color> entity)
-        {
+        { 
+
             entity.ToTable("color");
             entity.HasIndex(e => e.Id, "Id");
              

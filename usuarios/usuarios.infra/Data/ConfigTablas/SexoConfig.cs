@@ -15,7 +15,7 @@ namespace usuarios.infra.Data.ConfigTablas
         void IEntityTypeConfiguration<Sexo>.Configure(EntityTypeBuilder<Sexo> entity)
         {
            
-                entity.ToTable("Sexo");
+                entity.ToTable("sexo");
                 entity.Property(e => e.Descripcion).HasMaxLength(100);
                 entity.Property(e => e.Estado)
                     .IsRequired()

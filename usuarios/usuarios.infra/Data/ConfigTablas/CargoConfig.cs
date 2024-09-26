@@ -14,7 +14,7 @@ namespace usuarios.infra.Data.ConfigTablas
     {
         void IEntityTypeConfiguration<Cargo>.Configure(EntityTypeBuilder<Cargo> entity)
         {
-            entity.ToTable("Cargos");
+            entity.ToTable("cargos");
             entity.HasIndex(e => e.EmpresaId, "EmpresaID");
 
             entity.Property(e => e.CargoId).HasColumnName("CargoID");

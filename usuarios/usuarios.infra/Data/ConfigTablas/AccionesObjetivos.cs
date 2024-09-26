@@ -13,7 +13,7 @@ namespace usuarios.infra.Data.ConfigTablas
     {
         void IEntityTypeConfiguration<AccionObjetivo>.Configure(EntityTypeBuilder<AccionObjetivo> entity)
         {
-            entity.ToTable("AccionesObjetivos");
+            entity.ToTable("accionesobjetivos");
             entity.HasKey(e => e.Id);
             entity.Property(e => e.IdObjetivo).HasColumnName("IdObjetivo");
             entity.Property(e => e.IdUsuario).HasColumnName("IdUsuario");

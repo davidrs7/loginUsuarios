@@ -13,7 +13,7 @@ namespace usuarios.infra.Data.ConfigTablas
     {
         void IEntityTypeConfiguration<rolesPermisos>.Configure(EntityTypeBuilder<rolesPermisos> entity)
         {
-            entity.ToTable("RolesPermisos");
+            entity.ToTable("rolespermisos");
             entity.HasKey(e => e.rolPermisoId);
             entity.Property(e => e.RolID);
             entity.Property(e => e.PermisoID);

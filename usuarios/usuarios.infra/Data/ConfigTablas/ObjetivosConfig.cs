@@ -13,7 +13,7 @@ namespace usuarios.infra.Data.ConfigTablas
     {
         void IEntityTypeConfiguration<Objetivo>.Configure(EntityTypeBuilder<Objetivo> entity)
         {
-            entity.ToTable("Objetivos");
+            entity.ToTable("objetivos");
             entity.HasKey(o => o.Id);
             entity.Property(e => e.Titulo).HasMaxLength(255);
             entity.Property(e => e.IdUsuario).HasMaxLength(255);

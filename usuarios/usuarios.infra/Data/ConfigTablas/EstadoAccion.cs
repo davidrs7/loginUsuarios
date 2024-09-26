@@ -13,7 +13,7 @@ namespace usuarios.infra.Data.ConfigTablas
     {
         void IEntityTypeConfiguration<EstadoAccion>.Configure(EntityTypeBuilder<EstadoAccion> entity)
         {
-            entity.ToTable("EstadosAcciones");
+            entity.ToTable("estadosacciones");
             entity.HasKey(e => e.Id);
             entity.Property(e => e.Estado); 
         }

@@ -17,7 +17,7 @@ namespace usuarios.infra.Data.ConfigTablas
             entity.HasKey(e => e.SesionId)
                 .HasName("PRIMARY");
 
-            entity.ToTable("Sesiones");
+            entity.ToTable("sesiones");
 
             entity.HasIndex(e => e.UsuarioId, "UsuarioID");
 

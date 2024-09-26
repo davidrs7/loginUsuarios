@@ -15,7 +15,7 @@ namespace usuarios.infra.Data.ConfigTablas
         void IEntityTypeConfiguration<Jerarquia>.Configure(EntityTypeBuilder<Jerarquia> entity)
         {
 
-            entity.ToTable("Jerarquias");
+            entity.ToTable("jerarquias");
 
             entity.HasIndex(e => e.JefeId, "JefeID");
 

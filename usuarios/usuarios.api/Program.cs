@@ -61,11 +61,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.Urls.Add("http://0.0.0.0:7243");
 app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection(); // solo para https
 app.UseAuthorization();
 app.UseAuthentication();
 app.MapControllers();
