@@ -16,9 +16,9 @@ namespace usuarios.infra.Data.ConfigTablas
         { 
 
             entity.ToTable("color");
-            entity.HasIndex(e => e.Id, "Id");
-             
+            entity.HasIndex(e => e.Id, "Id");             
             entity.Property(e => e.Available).HasColumnName("Available");
+            entity.Property(e => e.Hex).HasColumnName("Hex");
 
             entity.Property(e => e.Hex).HasMaxLength(255);
 

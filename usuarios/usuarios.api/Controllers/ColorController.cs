@@ -29,8 +29,42 @@ namespace usuarios.api.Controllers
             return Ok(Colores);
         }
 
+        [HttpGet("{Id}")]
+        public async Task<ApiResponse<Color>> GetColorById(int Id)
+        {
+            try
+            {
+                var Colores = await _apiRepository.GetAll();
+                var Color = Colores.Data.Where(x => x.Id == Id).ToList();
+                Color colorSeleccionado = new Color();
+
+                if (Color.Count() > 0)
+                {
+                    colorSeleccionado.Id = Color[0].Id;
+                    colorSeleccionado.Hex = Color[0].Hex;
+                    colorSeleccionado.Available = Color[0].Available;
+
+                }
+                var resultSesion = new ApiResponse<Color>
+                {
+                    Estado = new Estado { Codigo = "200", Mensaje = "Respuesta exitosa", Descripcion = "" },
+                    Data = colorSeleccionado
+                };
+
+                return resultSesion;
+            }
+            catch (Exception ex)
+            {
+                return new ApiResponse<Color>
+                {
+                    Estado = new Estado { Codigo = "500", Mensaje = "Error", Descripcion = ex.InnerException.Message },
+                    Data = null
+                };
+            }
+        }
+
         [HttpGet("colorHex/{colorHex}")]
-        public async Task<ApiResponse<Color>> GetColorById(string colorHex)
+        public async Task<ApiResponse<Color>> GetColorByHex(string colorHex)
         {
             try
             {
