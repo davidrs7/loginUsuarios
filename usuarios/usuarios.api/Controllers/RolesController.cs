@@ -62,8 +62,7 @@ namespace usuarios.api.Controllers
                 var Role = new Role
                 {
                     Nombre = createRolesDto.Nombre,
-                    Descripcion = createRolesDto.Descripcion,
-                    ColorId = createRolesDto.ColorId,
+                    Descripcion = createRolesDto.Descripcion, 
                     Estado = createRolesDto.Estado
                 };
                 var respuesta = await _apiRepository.Create(Role, "");
@@ -97,8 +96,7 @@ namespace usuarios.api.Controllers
                 }
 
                 existeRole.Data.Nombre = updateRole.Nombre;
-                existeRole.Data.Descripcion = updateRole.Descripcion;
-                existeRole.Data.ColorId = updateRole.ColorId;
+                existeRole.Data.Descripcion = updateRole.Descripcion; 
                 existeRole.Data.Estado = updateRole.Estado;
 
                 var respuesta = await _apiRepository.Update(id, existeRole.Data);
