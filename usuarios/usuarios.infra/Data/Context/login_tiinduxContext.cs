@@ -38,6 +38,7 @@ namespace usuarios.infra.Context
         public virtual DbSet<Color> Color { get; set; } = null!;
         public virtual DbSet<PostulateVacantRel> PostulateVacantRel { get; set; } = null!;
         public virtual DbSet<SurveyResponses> SurveyResponses { get; set; } = null!;
+        public virtual DbSet<EmploymentInformation> EmploymentInformation { get; set; } = null!;
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -70,7 +71,7 @@ namespace usuarios.infra.Context
             modelBuilder.ApplyConfiguration(new ColorConfig()); 
             modelBuilder.ApplyConfiguration(new PostulateVacantRelConfig());
             modelBuilder.ApplyConfiguration(new SurveyResponsesConfig());
-
+            modelBuilder.ApplyConfiguration(new EmploymentInformationConfig());
 
         }
 
